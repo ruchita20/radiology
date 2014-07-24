@@ -14,12 +14,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
-
-
-    # include urls for custom apps
-    url(r'^', 'usermanagement.views.home'),
-
-    url(r'^users/', include('usermanagement.urls')),
-    url(r'^patients/', include('patientmanagement.urls')),
+    
+    url(r'^$', 'usermanagement.views.login', name='home'),
+    
+  
 
 )

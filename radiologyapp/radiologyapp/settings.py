@@ -1,21 +1,35 @@
 # Django settings for radiologyapp project.
 
+# CUSTOM CODE FOR SETTINGS.PY - ROHAN
+
+# Django settings for test_app project.
+# non django settings - rohan
+import os
+SETTINGS_DIR = os.path.dirname(__file__)
+PROJECT_DIR = os.path.dirname(SETTINGS_DIR)
+
+
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+     ('Rohan', 'salantry.rohan@gmail.com'),
 )
 
 MANAGERS = ADMINS
+
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'radiology',                      # Or path to database file if using sqlite3.
+        
         'USER': 'root',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '127.0.0.1',             # Set to empty string for localhost. Not used with sqlite3.
+        
+
         'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
@@ -67,6 +81,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+     os.path.join('static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -106,6 +121,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+     os.path.join(PROJECT_DIR,'templates/'),
 )
 
 INSTALLED_APPS = (
@@ -115,10 +131,15 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # custom apps here - rohan
+    'usermanagement',
+    'patientmanagement',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+
 )
 
 # A sample logging configuration. The only tangible logging
