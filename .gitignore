@@ -1,1 +1,7 @@
-.elasticbeanstalk/
+
+usermanagement/models.pyc
+usermanagement/__init__.pyc
+patientmanagement/__init__.pyc
+radiologyapp/__init__.pyc
+radiologyapp/settings.py
+radiologyapp/settings.pyc
