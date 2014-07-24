@@ -1,0 +1,8 @@
+radiologyapp/settings.pyc
+radiologyapp/settings.py
+patientmanagement/__init__.pyc
+usermanagement/__init__.pyc
+usermanagement/models.pyc
+radiologyapp/radiology.db
+../.DS_Store
+.DS_Store
